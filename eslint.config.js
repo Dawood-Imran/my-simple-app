@@ -6,10 +6,19 @@ module.exports = [
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
       globals: {
-        ...globals.node // Includes process, module, etc.
+        ...globals.node
       },
       sourceType: "commonjs"
     },
-    ...js.configs.recommended // Use the recommended config from @eslint/js
+    ...js.configs.recommended
+  },
+  {
+    files: ["**/*.test.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.jest
+      }
+    }
   }
 ];

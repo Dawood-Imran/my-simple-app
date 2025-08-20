@@ -6,7 +6,7 @@
     "start": "node index.js",
     "lint": "eslint .",
     "test": "jest --env=node",
-    "build": "mkdir dist && copy index.js dist\\"
+    "build": "node build.js"
   },
   "keywords": [],
   "author": "",
